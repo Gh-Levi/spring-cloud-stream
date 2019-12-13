@@ -4,11 +4,10 @@ import io.levi.baeldung.demo.springcloudstream.productor.AvroProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.schema.registry.EnableSchemaRegistryServer;
+
 import org.springframework.cloud.schema.registry.client.EnableSchemaRegistryClient;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Processor;
-import org.springframework.kafka.annotation.EnableKafkaStreams;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableBinding(Processor.class)
 @EnableSchemaRegistryClient
+
 public class SpringCloudStreamApplication {
 
 	@Autowired
